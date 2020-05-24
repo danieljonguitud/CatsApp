@@ -1,11 +1,10 @@
 package com.effectivo.CatsApp.persistence.models;
 
-public class Cat {
-
+public class CatFav {
     String id;
-    String url;
+    String image_id;
     String apiKey = "Insert your Api Key";
-    String image;
+    public Imagex image;
 
     public String getId() {
         return id;
@@ -15,12 +14,12 @@ public class Cat {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public String getImage_id() {
+        return image_id;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImage_id(String image_id) {
+        this.image_id = image_id;
     }
 
     public String getApiKey() {
@@ -31,11 +30,11 @@ public class Cat {
         this.apiKey = apiKey;
     }
 
-    public String getImage() {
+    public Imagex getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Imagex image) {
         this.image = image;
     }
 }

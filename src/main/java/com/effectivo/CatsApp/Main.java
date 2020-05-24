@@ -1,13 +1,15 @@
 package com.effectivo.CatsApp;
 
+import com.effectivo.CatsApp.persistence.models.Cat;
 import com.effectivo.CatsApp.persistence.service.CatService;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int option_menu = -1;
-        String[] buttons = {" 1. see cats", "2. exit"};
+        String[] buttons = {" 1. see cats", "2. see favorite", "3. exit", };
 
         do{
             //Principal Menu
@@ -23,8 +25,11 @@ public class Main {
 
             switch(option_menu){
                 case 0:
-                   CatService.seeCats();
+                    CatService.seeCats();
                     break;
+                case 1:
+                    Cat cat = new Cat();
+                    CatService.seeFavorites(cat.getApiKey());
                 default:
                     break;
             }
